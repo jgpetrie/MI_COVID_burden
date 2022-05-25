@@ -7,10 +7,10 @@ Order of analysis:
 3. MCMC assumed mean.R
 4. MCMC summary assumed mean.R
    * .sh scripts to run 3. and 4. on server:
-      ** mcmc_0_17_assumed_mean.sh
-      ** mcmc_18_49_assumed_mean.sh
-      ** mcmc_50_64_assumed_mean.sh
-      ** mcmc_65plus_assumed_mean.sh
+      * mcmc_0_17_assumed_mean.sh
+      * mcmc_18_49_assumed_mean.sh
+      * mcmc_50_64_assumed_mean.sh
+      * mcmc_65plus_assumed_mean.sh
 6. burden_cases.R
 7. burden_hosp.R
 8. burden_deaths.R
