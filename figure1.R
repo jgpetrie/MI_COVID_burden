@@ -1,8 +1,9 @@
-###Project: B.1.1.7 Burden
+###Project: MI COVID Burden
 ###Purpose: Figure 1
 ###Author: Josh Petrie
 ###Date: 12/23/2021
 ###Input: "MI County Details.xlsx"
+  #county to public health region links
 ###Input: "counties_and_fips_codes.csv"
 ###Output: "region_map.pdf"
 
