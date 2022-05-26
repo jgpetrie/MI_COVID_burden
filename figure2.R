@@ -1,4 +1,4 @@
-###Project: B.1.1.7 Burden
+###Project: MI COVID Burden
 ###Purpose: Figure 2
 ###Author: Josh Petrie
 ###Date: 12/23/2021
