@@ -1,8 +1,9 @@
-###Project: B.1.1.7 Burden
+###Project: MI COVID Burden
 ###Purpose: Prepare Vaccination Data by Age and Region
 ###Author: Josh Petrie
 ###Date: 12/23/2021
 ###Input: "Covid_Vaccine_Coverage_by_County_718469_7.xlsx"
+  #from https://www.michigan.gov/documents/coronavirus/Covid_Vaccine_Coverage_by_County_718469_7.xlsx
 ###Output: "burden_region_vaccine.csv"
 ###Output: "burden_region_vaccine_adjusted_age_groups.csv"
 
