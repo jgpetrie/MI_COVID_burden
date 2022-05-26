@@ -1,10 +1,13 @@
+###Project: MI COVID Burden
+###Purpose: Prepare Seroprevalence data
+###Author: Josh Petrie, Marisa Eisenberg
+###Date: 12/23/2021
+
+
 library(ggplot2)
 library(gridExtra)
 
 # Calculates a likelihood for fitting the mean & sd of a weibull
-# Assuming weighted least squares (normally distributed measurement error with known sd's for the data)
-#  - actually just doing ordinary least squares for now but if you update the variance lines below (lines 30 & 43) with the data variances it will do weighted!
-# Converted this function from Josh's plot function
 likelihood = function(params){
   mean <- params[1]
   sd <- params[2]
@@ -22,6 +25,16 @@ likelihood = function(params){
   #convert to probability of remaining detectable
   p_detectable <- 1-p_undetectable
   
+  #data points taken from:
+  #
+  #Kahre E, Galow L, Unrath M, et al. 
+  #Kinetics and seroprevalence of SARS-CoV-2 antibodies: a comparison of 3 different assays. 
+  #Sci Rep. 2021;11(1):14893. doi:10.1038/s41598-021-94453-5
+  #
+  #Maine GN, Lao KM, Krishnan SM, et al. 
+  #Longitudinal characterization of the IgM and IgG humoral response in symptomatic COVID-19 
+  #patients using the Abbott Architect. 
+  #J Clin Virol. 2020;133:104663. doi:10.1016/j.jcv.2020.104663
   data <- data.frame("days" = seq(14,365,14), 
                           "p_detectable" = p_detectable,
                           "Kahre" = c(rep(NA,10),0.59,rep(NA,11),0.24,rep(NA,3)),
@@ -107,12 +120,12 @@ plot.weibull <- function(m,s){
 }
 
 # Plot the resulting fitted parameters
-pdf("S:/Monto_Ohmit/Sam Harrison/Burden - B117/documents/results/weibull_fit.pdf",
+pdf("weibull_fit.pdf",
     width = 8, height = 6)
   plot.weibull(fit$par[1],fit$par[2])
 dev.off() 
 
-jpeg("S:/Monto_Ohmit/Sam Harrison/Burden - B117/documents/results/weibull_fit.jpg",
+jpeg("weibull_fit.jpg",
     width = 8, height = 6, units = "in", res = 800)
 plot.weibull(fit$par[1],fit$par[2])
 dev.off() 
