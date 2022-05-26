@@ -1,10 +1,13 @@
-###Project: B.1.1.7 Burden
+###Project: MI COVID Burden
 ###Purpose: Prepare Hospitalization Data by Age and Region
 ###Author: Josh Petrie
 ###Date: 12/23/2021
 ###Input: "/conf_withoutMDOC_phregion_ageyear.csv"
+  #from MDSS
 ###Input: "/COVID-19_Reported_Patient_Impact_and_Hospital_Capacity_by_Facility.csv"
+  #from https://healthdata.gov/Hospital/COVID-19-Reported-Patient-Impact-and-Hospital-Capa/anag-cw7u
 ###Input: "EMResource Hospitals by County_07022020.xlsx"
+  #link hospital facilities to MI county
 ###Output: "burden_region_hosp.csv"
 
 # =========== Load Packages and set filepaths ==================
