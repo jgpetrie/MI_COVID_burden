@@ -1,10 +1,10 @@
 ###Project: B.1.1.7 Burden
 ###Purpose: Prepare Death Data by Age and Region
 ###Author: Josh Petrie
-###Date: 7/23/2021
-###Input: "S:/Monto_Ohmit/Sam Harrison/Burden - B117/data/original/conf_withoutMDOC_phregion_ageyear.csv"
-###Input: "S:/Monto_Ohmit/Sam Harrison/Burden - B117/data/original/Excess_Deaths_Associated_with_COVID-19.csv"
-###Output: "S:/Monto_Ohmit/Sam Harrison/Burden - B117/data/processed/burden_region_deaths.csv"
+###Date: 12/23/2021
+###Input: "conf_withoutMDOC_phregion_ageyear.csv"
+###Input: "Excess_Deaths_Associated_with_COVID-19.csv"
+###Output: "burden_region_deaths.csv"
 
 # =========== Load Packages and set filepaths ==================
 library(dplyr)
@@ -14,9 +14,9 @@ library(gridExtra)
 library(ggplot2)
 library(tidyr)
 
-lfp<- "S:/Monto_Ohmit/Sam Harrison/Burden - B117/data/original"
-ofp<- "S:/Monto_Ohmit/Sam Harrison/Burden - B117/data/processed"
-rfp<- "S:/Monto_Ohmit/Sam Harrison/Burden - B117/documents/results"
+lfp<- "original/data/filepath"
+ofp<- "processed/data/filepath"
+rfp<- "results/filepath"
 
 # =========== Read Data ==================
 mdss <- read.csv(paste0(lfp,"/conf_withoutMDOC_phregion_ageyear.csv"),
@@ -84,7 +84,8 @@ wide.death.week <- long.death.week %>%
 
 names(wide.death.week)[3:11] <- paste0("X",names(wide.death.week)[3:11])
 
-#merge in total and calculate percent of all weekly deaths that happened in each region/age group
+#merge in total and calculate percent of all weekly deaths that 
+#happened in each region/age group
 wide.death.week <- left_join(wide.death.week,total,by="Week.Ending.Date") %>%
   mutate(p.0to17 = ifelse(total==0, 0, X0to17/total),
          p.18to19 = ifelse(total==0, 0, X18to19/total),
@@ -110,7 +111,9 @@ wide.death.week <- wide.death.week %>%
 
 #final formatting
 wide.death.week <- as.data.frame(wide.death.week) %>%
-  filter(Week.Ending.Date>=as.Date("2020-09-01") & Area != 0 & !is.na(combined)) %>%
+  filter(
+    Week.Ending.Date>=as.Date("2020-09-01") & Area != 0 & !is.na(combined)
+    ) %>%
   select(Area, Week.Ending.Date,
          final.0to17,final.18to19,final.20to29,final.30to39,final.40to49,
          final.50to59,final.60to69,final.70to79,final.80plus) %>%
