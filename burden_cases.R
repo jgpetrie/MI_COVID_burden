@@ -1,8 +1,9 @@
-###Project: B.1.1.7 Burden
+###Project: MI COVID Burden
 ###Purpose: Prepare Case Data by Age and Region
 ###Author: Josh Petrie
 ###Date: 12/23/2021
 ###Input: "conf_withoutMDOC_phregion_ageyear.csv"
+  #from MDSS
 ###Input: "mcmc/parameter_estimates_0-17.csv"
 ###Input: "mcmc/parameter_estimates_18-49.csv"
 ###Input: "mcmc/parameter_estimates_50-64.csv"
