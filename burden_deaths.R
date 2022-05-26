@@ -1,9 +1,11 @@
-###Project: B.1.1.7 Burden
+###Project: MI COVID Burden
 ###Purpose: Prepare Death Data by Age and Region
 ###Author: Josh Petrie
 ###Date: 12/23/2021
 ###Input: "conf_withoutMDOC_phregion_ageyear.csv"
+  #from MDSS
 ###Input: "Excess_Deaths_Associated_with_COVID-19.csv"
+  #from https://www.cdc.gov/nchs/nvss/vsrr/covid19/excess_deaths.htm
 ###Output: "burden_region_deaths.csv"
 
 # =========== Load Packages and set filepaths ==================
