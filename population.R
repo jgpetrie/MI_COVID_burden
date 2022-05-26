@@ -1,9 +1,11 @@
-###Project: B.1.1.7 Burden
+###Project: MI COVID Burden
 ###Purpose: Estimate populations by region and age
 ###Author: Josh Petrie
 ###Date: 12/23/2021
 ###Input: "total_census_tract.csv"
+  #populations by county and age
 ###Input: "MI county details.xlsx"
+  #county to public health preparedness region links
 ###Output: "estimated_population_by_age.csv"
 
 # =========== Load Packages and set filepaths ==================
