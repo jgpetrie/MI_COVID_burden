@@ -29,5 +29,5 @@ Code used to estimate total SARS-CoV-2 cases, hospitalizations, and deaths by ag
 3. Covid_Vaccine_Coverage_by_County_718469_7.xlsx was obtained from: https://www.michigan.gov/documents/coronavirus/Covid_Vaccine_Coverage_by_County_718469_7.xlsx
 4. Excess_Deaths_Associated_with_COVID-19.csv was obtained from: https://www.cdc.gov/nchs/nvss/vsrr/covid19/excess_deaths.htm
 5. Additional, publicly available data used in the analysis but not posted here:
-  * COVID-19_Reported_Patient_Impact_and_Hospital_Capacity_by_Facility.csv available at: https://healthdata.gov/Hospital/COVID-19-Reported-Patient-Impact-and-Hospital-Capa/anag-cw7u
-  * SARS-CoV-2 variant proportions by time: https://covariants.org/
+   * COVID-19_Reported_Patient_Impact_and_Hospital_Capacity_by_Facility.csv available at: https://healthdata.gov/Hospital/COVID-19-Reported-Patient-Impact-and-Hospital-Capa/anag-cw7u
+   * SARS-CoV-2 variant proportions by time: https://covariants.org/
